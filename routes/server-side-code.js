@@ -46,15 +46,15 @@
 //     }
 
 //     transporter.sendMail(mail, (err, data) => {
-//         if (err) {
-//             res.json({
-//                 status: 'fail'
-//             })
-//         } else {
-//             res.json({
-//                 status: 'success'
-//             })
-//         }
+//         // if (err) {
+//         //     res.json({
+//         //         status: 'fail'
+//         //     })
+//         // } else {
+//         //     res.json({
+//         //         status: 'success'
+//         //     })
+//         // }
 //     });
 
 //     // Auto-reply confirmation email to sender

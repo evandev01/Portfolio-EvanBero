@@ -3,11 +3,13 @@
 const path = require('path');
 const router = require("express").Router();
 const healthCheckRoute = require('./health-check');
-const email = require('./email-route');
+const emailRoute = require('./email-route');
 
 // API Route
 
-router.use('/api/contact', email);
+router.use('/api/contact', emailRoute);
+
+router.use('/api', healthCheckRoute);
 
 
 module.exports = router;
