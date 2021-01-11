@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const cors = require('cors');
-const creds = require('../config');
+const creds = require('../config/config');
 
 const app = express();
 app.use(cors());
@@ -28,11 +28,12 @@ module.exports = {
         }
     },
 
-    transporter: nodemailer.createTransport(transport),
+    // transporter: nodemailer.createTransport(transport),
 
 
     // Send and confirm status of email function
     sendMessage: function (mail) {
+        const transporter = nodemailer.createTransport(transport)
 
         transporter.sendMail(mail, (err, data) => {
             if (err) {

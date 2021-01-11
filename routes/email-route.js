@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const genEmail = require('../emailer');
+const genEmail = require('../emailer/generate-email');
 
 // Email post route
 router.post('/send', (req, res) => {
